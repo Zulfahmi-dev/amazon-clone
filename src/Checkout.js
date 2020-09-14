@@ -1,29 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 import './Checkout.css';
+import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider';
 import Subtotal from "./Subtotal";
 
 function Checkout() {
     const [{basket}, dispatch] = useStateValue();
-    const [total, setTotal] = useState({});
 
-    useEffect(() => {
-        hitungTotal();
-
-        return () => {
-            setTotal({})
-        }
-    }, [basket])
-    
-    const hitungTotal = () => {
-        let total = 0;
-
-        basket.forEach(item => {
-            total += item?.price;
+    const removeProduct = (id) => {
+        console.log(id)
+        dispatch({
+            type: 'REMOVE_FROM_BASKET',
+            id:id
         })
-        setTotal({...total, price:total, qty:basket.length});
     }
+
     return (
         <div className="checkout">
             <div className="checkout__left">
@@ -32,11 +24,14 @@ function Checkout() {
                 </Link>
                 <div>
                     <h2 className="checkout__title">Your Shopping Basket</h2>
-
+                    
+                    {basket.map(item => {
+                        return <CheckoutProduct {...item} removeProduct={removeProduct}/>
+                    })}
                 </div>
             </div>
             <div className="checkout__right">
-                <Subtotal totalPrice={total.price} totalItem={total.qty} />
+                <Subtotal />
             </div>
         </div>
     )

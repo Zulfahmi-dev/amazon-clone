@@ -10,7 +10,7 @@ function Home() {
 
                 <div className="home__row" >
                     <Product
-                        id="1212132" 
+                        id="12121122" 
                         title="The lean startup" 
                         price={19.99} 
                         image='https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg'
@@ -27,14 +27,14 @@ function Home() {
                 </div>
                 <div className="home__row" >
                     <Product
-                        id="1212132" 
+                        id="1212as132" 
                         title="Amazon.in: Buy Epson L130 Single-Function Ink Tank Colour Printer Online at  Low Prices in India | Epson Reviews & Ratings" 
                         price={500.99} 
                         image='https://images-na.ssl-images-amazon.com/images/I/71FDAbUf9VL._SX425_.jpg'
                         rating={5}
                     />
                     <Product
-                        id="1212132" 
+                        id="12121122" 
                         title="The lean startup" 
                         price={19.99} 
                         image='https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg'
@@ -50,7 +50,7 @@ function Home() {
                 </div>
                 <div className="home__row" >
                     <Product
-                        id="1212132" 
+                        id="121213212" 
                         title="Microsoft Xbox One X 1Tb Console With Wireless Controller: Xbox One X  Enhanced, Hdr, Native 4K, Ultra Hd (Discontinued)" 
                         price={19.99} 
                         image='https://images-na.ssl-images-amazon.com/images/I/61ux1cU49XL._SX385_.jpg'

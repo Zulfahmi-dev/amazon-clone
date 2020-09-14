@@ -13,6 +13,10 @@ function App() {
         <Header />
         
         <Switch>
+          {/* route login */}
+          <Route path="/login">
+            <h1>Login</h1>
+          </Route>
           {/* route homes */}
           <Route path="/" exact>
             <Home />
